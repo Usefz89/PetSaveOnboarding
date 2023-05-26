@@ -41,7 +41,7 @@ public struct PetSaveOnBoardingView: View {
     self.items = items
   }
   private var onNext: (_ currentIndex: Int) -> Void = { _ in}
-  public  var onSkip: () -> Void = {}
+  private  var onSkip: () -> Void = {}
   private var nextButtonTitle: String {
     return items[currentPageIndex].nextButtonTitle
   }
@@ -84,13 +84,13 @@ public struct PetSaveOnBoardingView: View {
       }
     }
   
-  private func onNext(action: @escaping (_ currentIndex: Int) -> Void) -> Self {
+  public func onNext(action: @escaping (_ currentIndex: Int) -> Void) -> Self {
     var onboardingView = self
     onboardingView.onNext = action
     return onboardingView
   }
   
-   func onSkip(action: @escaping () -> Void) -> Self {
+  public  func onSkip(action: @escaping () -> Void) -> Self {
     var onboardingView = self
     onboardingView.onSkip = action
     return onboardingView
