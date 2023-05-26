@@ -49,7 +49,7 @@ public struct PetSaveOnBoardingView: View {
     return items[currentPageIndex].skipButtonTitle
   }
   
-    var body: some View {
+    public var body: some View {
       if items.isEmpty {
         Text("There is no items to share")
         
