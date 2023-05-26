@@ -32,7 +32,7 @@
 
 import SwiftUI
 
-struct PetSaveOnBoardingView: View {
+public struct PetSaveOnBoardingView: View {
   @State var currentPageIndex: Int = 0
   private var items: [OnBoardingModel] = []
   
