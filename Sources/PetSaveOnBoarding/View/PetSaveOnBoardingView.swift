@@ -41,7 +41,7 @@ public struct PetSaveOnBoardingView: View {
     self.items = items
   }
   private var onNext: (_ currentIndex: Int) -> Void = { _ in}
-  private var onSkip: () -> Void = {}
+  public  var onSkip: () -> Void = {}
   private var nextButtonTitle: String {
     return items[currentPageIndex].nextButtonTitle
   }
