@@ -32,7 +32,7 @@
 
 import SwiftUI
 
-extension Image {
+public extension Image {
   static var bird: Image {
     Image("creature-bird-blue-fly", bundle: .module)
   }
